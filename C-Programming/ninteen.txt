@@ -1,0 +1,15 @@
+In C programming, preprocessor directives begin with a # symbol and are processed before the actual compilation of the code. Here are some commonly used preprocessor directives:
+
+#include: Includes the content of a file at the point where the directive appears in the code.
+Example: #include <stdio.h>
+
+#define: Defines a macro or a symbolic constant. It is a way to create aliases for literals or short snippets of code.
+Example: #define MAX_SIZE 100
+
+#ifdef, #ifndef, #endif, #else: Used for conditional compilation. Allows inclusion or exclusion of code based on whether a specific identifier is defined.
+
+#line: It handles the line numbers on the errors and warnings. It can be used to change the line number and source files while generating output during compile time.
+
+#error and #warning: It can be used for generating errors and warnings.
+#error can be performed to stop compilation.
+#warning is performed to continue compilation with messages in the console window.

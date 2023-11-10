@@ -1,0 +1,17 @@
+A memory leak occurs when a program allocates memory but fails to deallocate or release it before the program exits. This results in a gradual accumulation of unused memory over time, and if the program continues to run, it may eventually consume all available memory resources, leading to performance issues or crashes.
+
+Here's an example of code that could lead to a memory leak:
+
+
+#include <stdlib.h>
+
+int main() {
+    int *arr = (int*)malloc(10 * sizeof(int)); // Allocating memory
+
+    // Performing operations with the allocated memory
+
+    // Forgot to free the allocated memory
+    // free(arr); // Uncommenting this line prevents the memory leak
+
+    return 0;
+}

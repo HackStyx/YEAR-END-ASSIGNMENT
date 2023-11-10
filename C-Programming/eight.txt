@@ -1,0 +1,63 @@
+In C, storage class specifiers are keywords that define the storage duration and scope of variables. Here's a breakdown of the main storage class specifiers:
+
+auto: This is the default storage class for local variables. Variables declared with auto are automatically created and initialized every time the block they are declared in is entered. However, it is rarely used explicitly, as the auto keyword is implicit for local variables.
+
+Example:
+
+c
+Copy code
+#include <stdio.h>
+
+int main() {
+    auto int x = 10; // 'auto' is rarely used explicitly
+    printf("%d\n", x);
+
+    return 0;
+}
+register: This specifier suggests that a variable should be stored in a register for faster access. However, it's important to note that the use of register is just a hint to the compiler, and it may choose to ignore it. Modern compilers are often capable of optimizing register usage themselves.
+
+Example:
+
+#include <stdio.h>
+
+int main() {
+    register int count = 5; // Suggesting to store 'count' in a register
+    printf("%d\n", count);
+
+    return 0;
+}
+static: Variables declared as static have a scope limited to the file they are declared in. If a static variable is declared within a function, its value persists between function calls. If it's declared outside any function, it is a global variable with file scope.
+
+Example:
+
+#include <stdio.h>
+
+void demoFunction() {
+    static int counter = 0; // 'counter' retains its value between calls
+    counter++;
+    printf("%d\n", counter);
+}
+
+int main() {
+    demoFunction(); // Output: 1
+    demoFunction(); // Output: 2
+
+    return 0;
+}
+extern: The extern specifier is used for declaring variables that are defined in another source file or library. It tells the compiler that the variable is defined elsewhere.
+
+Example:
+
+// File1.c
+int globalVar = 10;
+
+// File2.c
+#include <stdio.h>
+
+extern int globalVar; // Declaration of 'globalVar' from File1.c
+
+int main() {
+    printf("%d\n", globalVar); // Accessing 'globalVar' from File1.c
+
+    return 0;
+}

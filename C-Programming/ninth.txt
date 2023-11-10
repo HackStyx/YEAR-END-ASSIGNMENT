@@ -1,0 +1,33 @@
+Runtime errors occur during the execution of a program. Here are a couple of common types:
+
+Divide by zero: This occurs when attempting to divide a number by zero.
+
+Example:
+
+#include <stdio.h>
+
+int main() {
+    int num = 5;
+    int denom = 0;
+    int result = num / denom; // Division by zero
+
+    printf("Result: %d\n", result);
+
+    return 0;
+}
+In this example, attempting to divide by zero leads to a runtime error.
+
+Accessing out-of-bounds memory: This happens when trying to access memory beyond the limits of an array.
+
+Example:
+
+
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    printf("%d\n", arr[10]); // Accessing out-of-bounds memory
+
+    return 0;
+}
+In this example, accessing an element beyond the array bounds causes a runtime error

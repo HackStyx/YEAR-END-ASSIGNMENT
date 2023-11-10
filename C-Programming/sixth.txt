@@ -1,0 +1,14 @@
+Dynamic memory allocation in C allows you to allocate memory at runtime. It's particularly useful when you don't know the size of the data in advance. The main functions for dynamic memory allocation are malloc, calloc, realloc, and free.
+
+malloc: Allocates a specified number of bytes of memory.
+
+
+ptr = (castType*)malloc(size);
+calloc: Allocates space for an array of elements, initializing them to zero.
+
+
+ptr = (castType*)calloc(num, size);
+realloc: Changes the size of the memory block.
+
+
+ptr = realloc(ptr, newSize);
