@@ -1,0 +1,24 @@
+Pretty Print (pprint):
+
+pprint is short for "pretty print." It's a module in Python's pprint standard library that provides a capability to "pretty-print" arbitrary Python data structures in a format that can be used as input to the interpreter.
+Example:
+from pprint import pprint
+
+data = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+pprint(data)
+This results in a more readable and visually appealing representation of the data.
+
+Pyperclip:
+
+Pyperclip is a Python module that provides a cross-platform clipboard interface. It allows you to copy and paste text to and from the clipboard.
+Example:
+
+import pyperclip
+
+# Copy text to clipboard
+pyperclip.copy("Hello, clipboard!")
+
+# Paste text from clipboard
+clipboard_text = pyperclip.paste()
+print(clipboard_text)

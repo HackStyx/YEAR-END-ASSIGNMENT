@@ -1,0 +1,59 @@
+Variable Scope in Functions:
+
+In Python, the scope of a variable determines where the variable can be accessed or modified. There are two main types of variable scope:
+
+Local Scope: Variables defined inside a function are called local variables. They are only accessible within that function. Once the function execution is completed, local variables are destroyed.
+
+Global Scope: Variables defined outside any function are called global variables. They can be accessed by any part of the code, both inside and outside functions.
+
+Calculator Program:
+
+python
+Copy code
+# Global variable
+result = 0
+
+def add(a, b):
+    # Using global keyword to modify global variable
+    global result
+    result = a + b
+
+def subtract(a, b):
+    global result
+    result = a - b
+
+def multiply(a, b):
+    global result
+    result = a * b
+
+def divide(a, b):
+    global result
+    # Handling division by zero
+    result = a / b if b != 0 else "Cannot divide by zero"
+
+# Example usage
+add(5, 3)
+print("Result after addition:", result)
+
+subtract(10, 4)
+print("Result after subtraction:", result)
+
+multiply(3, 6)
+print("Result after multiplication:", result)
+
+divide(8, 2)
+print("Result after division:", result)
+Explanation:
+
+The result variable is declared outside any function, making it a global variable.
+Each function (add, subtract, multiply, divide) modifies the global variable result based on the specified arithmetic operation.
+The global keyword is used inside each function to indicate that the variable being modified is the global variable, not a local one.
+The program then demonstrates the usage of these functions to perform various arithmetic operations.
+Example Output:
+
+rust
+Copy code
+Result after addition: 8
+Result after subtraction: 6
+Result after multiplication: 18
+Result after division: 4.0

@@ -1,0 +1,31 @@
+Assertions: In Python, an assertion is a statement that checks whether a given condition is true. It is mainly used during development to catch programming errors early. Assertions help developers identify and fix bugs by verifying that certain conditions or assumptions about the state of the program are true.
+Using an Assertion in Traffic Light Simulation:
+
+Let's consider a simple traffic light simulation where we want to ensure that the color of the traffic light is one of the valid colors: 'red', 'yellow', or 'green'. We'll use an assertion to check this condition.
+
+class TrafficLight:
+    def __init__(self, color):
+        self.color = color
+
+    def change_color(self):
+        # Using assertion to check the validity of traffic light color
+        assert self.color in ['red', 'yellow', 'green'], "Invalid traffic light color"
+
+        if self.color == 'red':
+            print("Stop!")
+        elif self.color == 'yellow':
+            print("Slow down!")
+        else:
+            print("Go!")
+
+
+# Example usage:
+traffic_light = TrafficLight('green')
+traffic_light.change_color()
+In this example:
+
+The TrafficLight class has a method change_color that simulates changing the color of the traffic light.
+The assert statement checks whether self.color is one of the valid colors ('red', 'yellow', 'green'). If not, it raises an AssertionError with the specified error message.
+Depending on the color, the traffic light displays the appropriate message.
+Assertions are useful during development to catch logical errors early. However, keep in mind that assertions can be disabled globally in Python, and they are typically used for debugging purposes. They may be removed or disabled in production code for performance reasons.
+

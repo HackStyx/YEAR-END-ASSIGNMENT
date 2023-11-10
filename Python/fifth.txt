@@ -1,0 +1,25 @@
+Files: In programming, a file is a named location on disk to store data. Files can be used to store information permanently, and they can be read from or written to.
+File Operations in Python:
+
+a. Opening File:
+
+To open a file in Python, you use the open() function. The basic syntax is open(file_path, mode), where file_path is the path to the file, and mode specifies the purpose (read, write, etc.).
+file = open("example.txt", "r")  # Opens the file in read mode
+b. Reading File:
+
+Reading from a file can be done using methods like read(), readline(), or readlines().
+content = file.read()  # Reads the entire content of the file
+c. Closing File:
+
+Always close a file after performing operations on it using the close() method.
+file.close()  # Closes the file
+d. Writing a File:
+
+To write to a file, open it in write or append mode ("w" or "a") and use methods like write().
+file = open("example.txt", "w")
+file.write("Hello, World!")  # Writes the given string to the file
+file.close()
+e. Checking the Current Position:
+
+To check the current position in the file, use the tell() method.
+position = file.tell()  # Returns the current file cursor position

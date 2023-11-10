@@ -1,0 +1,30 @@
+a. Accessing, Traversing, Updating, Deleting:
+
+Accessing:
+
+You can access the value associated with a key using square brackets.
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+# Accessing
+name = my_dict['name']  # Retrieves the value 'John'
+Traversing:
+
+You can traverse a dictionary using a loop to iterate through its keys or key-value pairs.
+for key in my_dict:
+    print(key, my_dict[key])
+Updating:
+
+Update a value associated with a key.
+my_dict['age'] = 31  # Updates the value associated with the 'age' key to 31
+Deleting:
+
+Remove a key-value pair from the dictionary.
+del my_dict['city']  # Deletes the 'city' key and its associated value
+b. Traversing a Dictionary Using a Loop:
+
+You can use a loop to iterate through the keys, values, or key-value pairs of a dictionary.
+for key in my_dict:
+    print(key, my_dict[key])
+Alternatively, you can use the items() method to iterate through key-value pairs directly.
+for key, value in my_dict.items():
+    print(key, value)

@@ -1,0 +1,43 @@
+Random Package:
+import random
+
+# Generate a random number between 1 and 10
+random_number = random.randint(1, 10)
+print("Random Number:", random_number)
+Explanation:
+
+The random package provides functions for generating random numbers.
+randint(a, b) generates a random integer between a and b (inclusive).
+Sys Package:
+import sys
+
+# Get command-line arguments
+arguments = sys.argv
+print("Command-line arguments:", arguments)
+Explanation:
+
+The sys package provides access to some variables used or maintained by the interpreter.
+sys.argv is a list in Python that contains the command-line arguments passed to the script.
+Os Package:
+
+import os
+
+# Get current working directory
+current_directory = os.getcwd()
+print("Current Working Directory:", current_directory)
+Explanation:
+
+The os package provides a way of using operating system-dependent functionality.
+os.getcwd() returns the current working directory of the process.
+Zipfile Package:
+import zipfile
+
+# Create a zip file
+with zipfile.ZipFile('my_archive.zip', 'w') as my_zip:
+    my_zip.write('file1.txt')
+    my_zip.write('file2.txt')
+Explanation:
+
+The zipfile package provides tools to create, read, write, append, and list a ZIP file.
+ZipFile('my_archive.zip', 'w') creates a new zip file in write mode.
+write() method is used to add files to the zip file.

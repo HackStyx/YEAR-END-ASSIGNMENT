@@ -1,0 +1,28 @@
+In Python, copying a list can be done using shallow copy or deep copy. The difference between the two is that a shallow copy creates a new object and populates it with references to the original elements, while a deep copy creates a new object and recursively adds the copies of nested objects present in the original elementsTo demonstrate the difference between shallow copy and deep copy using nested lists, consider the following example:
+
+import copy
+
+# Nested list
+old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Shallow copy
+new_list = copy.copy(old_list)
+
+# Deep copy
+deep_list = copy.deepcopy(old_list)
+
+# Modify the original list
+old_list[0][1] = 'AA'
+
+# Print the original and copied lists
+print("Original list:", old_list)
+print("Shallow copy:", new_list)
+print("Deep copy:", deep_list)
+
+In this example, old_list is a nested list with three sublists. We create a shallow copy of old_list using copy.copy() and a deep copy using copy.deepcopy(). We then modify the first element of the first sublist in old_list. Finally, we print all three lists to see how they have been affected by the modification. The output of the program is:
+
+Original list: [[1, 'AA', 3], [4, 5, 6], [7, 8, 9]]
+Shallow copy: [[1, 'AA', 3], [4, 5, 6], [7, 8, 9]]
+Deep copy: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+As we can see, the shallow copy new_list has been affected by the modification to old_list, while the deep copy deep_list remains unchanged. This is because the shallow copy only creates a new object with references to the original elements, while the deep copy creates a new object and recursively adds the copies of nested objects present in the original elements.

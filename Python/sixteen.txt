@@ -1,0 +1,22 @@
+Let's assume a directory structure:
+project/
+|-- data/
+|   |-- file.txt
+|-- scripts/
+|   |-- script.py
+Absolute Path: It provides the full path from the root directory.
+# Absolute Path (Linux)
+absolute_path_linux = "/home/user/project/data/file.txt"
+
+# Absolute Path (Windows)
+absolute_path_windows = "C:\\Users\\User\\project\\data\\file.txt"
+Relative Path: It is relative to the current working directory.
+# Relative Path from scripts directory
+relative_path = "../data/file.txt"
+On Windows, backslashes (\) are used as directory separators, while on Linux, forward slashes (/) are used. However, in Python, you can use the os.path.join() function to construct paths in a platform-independent way:
+import os
+
+# Constructing paths using os.path.join()
+absolute_path_linux = os.path.join("/", "home", "user", "project", "data", "file.txt")
+absolute_path_windows = os.path.join("C:", "Users", "User", "project", "data", "file.txt")
+relative_path = os.path.join("..", "data", "file.txt")

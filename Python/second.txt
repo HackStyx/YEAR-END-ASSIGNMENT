@@ -1,0 +1,65 @@
+a. Function and function call:
+
+Function: In Python, a function is a reusable block of code that performs a specific task. It takes input, processes it, and produces output. Functions help in organizing code and making it more modular.
+
+Syntax:
+
+def function_name(parameters):
+    # code block
+    return result
+Example:
+
+def add_numbers(a, b):
+    return a + b
+In this example, add_numbers is a function that takes two parameters (a and b), adds them together, and returns the result.
+
+Function Call: To execute a function and obtain its result.
+
+Syntax:
+
+result = function_name(arguments)
+Example:
+
+sum_result = add_numbers(3, 4)
+Here, the add_numbers function is called with arguments 3 and 4, and the result is stored in the variable sum_result.
+
+b. Type conversion function:
+
+Type Conversion: Changing the data type of a value. This is useful when you want to perform operations that require values of a specific type.
+
+Syntax:
+
+new_variable = target_type(original_variable)
+Example:
+
+num_str = "5"
+num_int = int(num_str)
+In this example, num_str is a string containing the character "5". The int() function is used to convert it to an integer, and the result is stored in the variable num_int.
+
+c. Random Numbers:
+
+Random Module: Python provides the random module for generating random numbers.
+
+Syntax:
+
+import random
+random_number = random.random()
+Example:
+
+import random
+dice_roll = random.randint(1, 6)
+Here, random.random() generates a random float between 0 and 1, and random.randint(1, 6) generates a random integer between 1 and 6, simulating a dice roll.
+
+d. Math Function:
+
+Math Module: Python's math module provides a variety of mathematical functions.
+
+Syntax:
+
+import math
+result = math.function_name(arguments)
+Example:
+
+import math
+square_root = math.sqrt(25)
+The math.sqrt() function calculates the square root of a number. In this case, it computes the square root of 25 and stores the result in the variable square_root.

@@ -1,0 +1,15 @@
+a. len() - Length of a String:
+
+length = len(my_string)  # Returns the length of the string, 13 in this case
+b. lower() - Convert to Lowercase:
+
+lowercase = my_string.lower()  # Converts the string to lowercase
+c. upper() - Convert to Uppercase:
+
+uppercase = my_string.upper()  # Converts the string to uppercase
+d. strip() - Remove Whitespace:
+
+stripped = "   extra spaces   ".strip()  # Removes leading and trailing whitespaces
+e. replace() - Replace Substring:
+
+replaced = my_string.replace("Hello", "Hi")  # Replaces "Hello" with "Hi"
